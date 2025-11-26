@@ -6,7 +6,7 @@ Unity's default Inspector does not support RTL (Right-to-Left) text shaping, cau
 
 ![Preview](MJ_PersianInspectorTool/Documentation/preview_image.png)
 
--------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 
 ![Preview](MJ_PersianInspectorTool/Documentation/preview_image_2.png)
 

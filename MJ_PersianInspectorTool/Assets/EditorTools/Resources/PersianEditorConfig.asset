@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048189b94140d554c8e61e1ef793911a, type: 3}
+  m_Name: PersianEditorConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Rizama.EditorTools.PersianEditorConfig
+  CustomFont: {fileID: 12800000, guid: 72937290ffa3afb43ab3f254a20759de, type: 3}
+  FontSize: 14
+  PreviewTextColor: {r: 1, g: 1, b: 1, a: 1}
+  PreviewBackgroundColor: {r: 0.15, g: 0.15, b: 0.15, a: 1}

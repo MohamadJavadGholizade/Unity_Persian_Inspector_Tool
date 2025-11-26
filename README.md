@@ -5,6 +5,9 @@ A professional, lightweight editor extension for rendering **Persian and Arabic*
 Unity's default Inspector does not support RTL (Right-to-Left) text shaping, causing disjointed letters. This tool provides a seamless **"Hybrid Editing"** experience with a custom **Virtual Keyboard**, **Bi-Directional Text Support**, and **Custom Font** rendering.
 
 ![Preview](MJ_PersianInspectorTool/Documentation/preview_image.png)
+
+-------------------------------------------------------------------------------
+
 ![Preview](MJ_PersianInspectorTool/Documentation/preview_image_2.png)
 
 ## ✨ Key Features

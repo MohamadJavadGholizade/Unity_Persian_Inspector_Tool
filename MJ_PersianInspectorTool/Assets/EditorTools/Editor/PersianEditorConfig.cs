@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace MJ.EditorTools
+namespace MJ.EditorTools.Editor
 {
     public class PersianEditorConfig : ScriptableObject
     {

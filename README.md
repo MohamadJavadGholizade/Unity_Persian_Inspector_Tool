@@ -21,6 +21,7 @@ Unity's default Inspector does not support RTL (Right-to-Left) text shaping, cau
 * **Per-Field Styling:** Customize font size individually for specific text fields.
 * **Smart Stats:** Displays real-time Character and Word counts.
 * **Zero Dependencies:** No heavy plugins or DLLs required.
+* **Smart Mixed-Text Handling:** Correctly displays parentheses `()`, numbers `123`, and English words inside Persian text.
 
 ## 📦 Installation
 

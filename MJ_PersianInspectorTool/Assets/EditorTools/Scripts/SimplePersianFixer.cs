@@ -13,7 +13,9 @@ namespace MJ.EditorTools
             string[] lines = str.Split('\n');
             for (int i = 0; i < lines.Length; i++)
             {
-                string shaped = Shape(lines[i]);
+                string bracketFixed = SwapBrackets(lines[i]);
+
+                string shaped = Shape(bracketFixed);
 
                 string reversed = ReverseText(shaped);
 
@@ -30,11 +32,49 @@ namespace MJ.EditorTools
             return new string(array);
         }
 
+        private static string SwapBrackets(string input)
+        {
+            char[] chars = input.ToCharArray();
+            for (int i = 0; i < chars.Length; i++)
+            {
+                switch (chars[i])
+                {
+                    case '(':
+                        chars[i] = ')';
+                        break;
+                    case ')':
+                        chars[i] = '(';
+                        break;
+                    case '[':
+                        chars[i] = ']';
+                        break;
+                    case ']':
+                        chars[i] = '[';
+                        break;
+                    case '{':
+                        chars[i] = '}';
+                        break;
+                    case '}':
+                        chars[i] = '{';
+                        break;
+                    case '<':
+                        chars[i] = '>';
+                        break;
+                    case '>':
+                        chars[i] = '<';
+                        break;
+                }
+            }
+
+            return new string(chars);
+        }
+
         private static string FixEnglishOrientation(string input)
         {
-            string pattern = @"[a-zA-Z0-9\+\-\*\/\.\,\!\?\:\;\'\""\(\)\[\]\@\#\$\%\&\=_\<\>]+(?:\s+[a-zA-Z0-9\+\-\*\/\.\,\!\?\:\;\'\""\(\)\[\]\@\#\$\%\&\=_\<\>]+)*";
+            string pattern =
+                @"[a-zA-Z0-9\+\-\*\/\.\,\!\?\:\;\'\""\@\#\$\%\&\=_]+(?:\s+[a-zA-Z0-9\+\-\*\/\.\,\!\?\:\;\'\""\@\#\$\%\&\=_]+)*";
 
-            return Regex.Replace(input, pattern, m => 
+            return Regex.Replace(input, pattern, m =>
             {
                 char[] arr = m.Value.ToCharArray();
                 System.Array.Reverse(arr);
@@ -114,7 +154,7 @@ namespace MJ.EditorTools
             { 'ل', new int[] { 0xFEDD, 0xFEDE, 0xFEDF, 0xFEE0 } },
             { 'م', new int[] { 0xFEE1, 0xFEE2, 0xFEE3, 0xFEE4 } },
             { 'ن', new int[] { 0xFEE5, 0xFEE6, 0xFEE7, 0xFEE8 } },
-            { 'و', new int[] { 0xFEEE, 0xFEEF } },
+            { 'و', new int[] { 0xFEEE, 0xFEEE } },
             { 'ه', new int[] { 0xFEE9, 0xFEEA, 0xFEEB, 0xFEEC } },
             { 'ی', new int[] { 0xFBFC, 0xFBFD, 0xFBFE, 0xFBFF } },
             { 'ي', new int[] { 0xFBFC, 0xFBFD, 0xFBFE, 0xFBFF } },
